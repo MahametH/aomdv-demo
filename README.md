@@ -5,13 +5,13 @@ Installation:
 
 ```bash
 sudo apt-get install ns2
+sudo apt-get install nam
 
-pip3 install tkinter
 ```
 
 ## Utilisation:
 
-Exécutez tclpy dans un shell Linux pour obtenir la trace, la sortie du fichier de nom et la mesure des métriques de performance.
+Exécutez wireless-AOMDV dans un shell Linux pour obtenir la trace, la sortie du fichier de nom et la mesure des métriques de performance.
 
 ## Description
 
