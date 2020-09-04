@@ -23,13 +23,26 @@ De nombreuses mesures de performance ont été développées et adoptées pour m
     Paquets abandonnés = paquets envoyés(i) - paquets reçus (i)
 -  Délai moyen de bout en bout (délai moyen E2E):
     Délai E2E[packet_id] = heure de réception [packet_id] - heure d'envoi [packet_id]
-Normaliser la charge de routage (NRL) [10] [17],
-NRL = nombre de paquets de routage /
-nombre de paquets reçus
-Fraction de livraison de paquets (PDF) [8],
-PDF = (nombre de paquets reçus /
-nombre de paquets envoyés) * 100
-Jitter moyen [18],
-Jitter = | (délai de bout en bout (k + 1)) - (fin-
-retard à la fin (k)) |
+- Charge de routage Normalisée (NRL):
+    NRL = nombre de paquets de routage / nombre de paquets reçus
+- Pourcentage de livraison de paquets (PDR):
+    PDR = (nombre de paquets reçus / nombre de paquets envoyés) * 100
 
+## Environnement de Simulation
+
+| Paramètre                 | Valeur                                    |
+| ------------------------- | ----------------------------------------- |
+| Nodes number              | 20                                        |
+| Propagation Model         | Propagation/TwoRayGround                  |
+| Antenna Model             | Antenna/OmniAntenna                       |
+| Interface queue type      | Queue/DropTail/PriQueue                   |
+| Mac Type                  | Mac/802_11                                |
+| Topological Area          | 800 m X 800 m                             |
+| Max Connection            | 5                                         |
+| Node speed                | 10 m/s                                    |
+| Pause Time                | 10 s                                      |
+| Simulation Time           | 100 s                                     |
+| Routing Protocol          | AOMDV                                     |
+| Traffic type              | CBR                                       |
+| Transport Protocol        | UDP                                       |
+| CBR Traffic Parameters    | Interval: 0.1 s , Packet Size:512 Bytes   |
